@@ -13,5 +13,6 @@ struct Dish: Identifiable {
     var name: String
     var value: String
     var type: String
-    var stars: Float
+    var image: String
+    var stars: String
 }

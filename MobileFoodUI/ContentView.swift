@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var search = ""
     var restaurants = Utils.RestaurantsFake().restaurants;
+    var dishs = Utils.DishsFake().dishs
     
     var body: some View {
         VStack {
@@ -28,7 +29,7 @@ struct ContentView: View {
                 
                 // Dish
                 
-                Dishview()
+                Dishview(dishs: dishs)
                
             }
         }
@@ -110,10 +111,21 @@ struct RestaurantView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(restaurants) { value in
-                        Image(value.image)
-                            .resizable()
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(5)
+                        VStack {
+                            Text(value.name)
+                                .padding([.top], 8)
+                                .padding([.trailing], 32)
+                            
+                            Image(value.image)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(120)
+                                .position(x: 120, y: 60)
+                        }
+                        .frame(width: 150, height: 120)
+                        .background(.orange.opacity(0.4))
+                        .cornerRadius(8)
+                        .clipped()
                       
                     }
                     
@@ -128,16 +140,24 @@ struct RestaurantView: View {
                     .padding([.top], 20)
                 
                 Spacer()
-                Rectangle()
-                    .fill(.orange)
-                    .frame(width: 40, height: 40)
+                ForEach(0..<2, id: \.self) { index in
+                    Image(restaurants[index].image)
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .cornerRadius(20)
+                        .padding([.top])
+                       
+                    
+                }
+              
+                Text("+\(restaurants.count - 2)")
+                    .foregroundColor(.white)
+                    .frame(width: 40, height: 40, alignment: .center)
+                    .background(.green)
                     .cornerRadius(20)
                     .padding([.top])
-                Rectangle()
-                    .fill(.orange)
-                    .frame(width: 40, height: 40)
-                    .cornerRadius(20)
-                    .padding([.top])
+                   
+                
                 
             }
             
@@ -147,6 +167,8 @@ struct RestaurantView: View {
 }
 
 struct Dishview: View {
+    var dishs: [Dish]
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Pratos")
@@ -154,27 +176,28 @@ struct Dishview: View {
                 .padding([.leading], 20)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<4) { value in
+                    ForEach(dishs) { value in
                         VStack(alignment: .leading) {
-                            Rectangle()
-                                .fill(.indigo)
+                            Image(value.image)
+                                .resizable()
                                 .frame(width:.infinity, height: 100)
                                 .cornerRadius(5)
+                          
                             
                             HStack() {
-                                Text("R$ 200")
+                                Text("R$ \(value.value)")
                                 
                                 Spacer()
                                 Image(systemName: "star.fill")
                                     .resizable()
                                     .frame(width: 10, height: 10)
                                     .foregroundColor(.yellow)
-                                Text("4,0")
+                                Text("\(value.stars)")
                                     .font(.caption)
                                 
                             }
                             
-                            Text("Feijão com Arroz 280gm")
+                            Text("\(value.name) 280gm")
                                 .font(.headline)
                             
                             Button {
