@@ -1,0 +1,24 @@
+{
+  "source": "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/NavigationTabView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Home"
+      },
+      {
+        "comment": "",
+        "key": "Carrinho"
+      },
+      {
+        "comment": "",
+        "key": "Configurações"
+      },
+      {
+        "comment": "",
+        "key": "Perfil"
+      }
+    ]
+  },
+  "version": 1
+}

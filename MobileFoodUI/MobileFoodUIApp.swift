@@ -11,7 +11,10 @@ import SwiftUI
 struct MobileFoodUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                NavigationTabView()
+
+            }
         }
     }
 }

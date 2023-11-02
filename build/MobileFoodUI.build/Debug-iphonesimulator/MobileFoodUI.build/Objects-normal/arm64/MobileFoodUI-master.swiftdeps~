@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "1e9f32300061a3644f53044c86460f87ec76a8cd6e6b97359a249795db7909b5"
+build_start_time: [1696524000, 839113950]
+build_end_time: [1696524000, 860005855]
+inputs:
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/ContentView.swift": !private [1696523987, 306043148]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/MobileFoodUIApp.swift": !private [1696523987, 301421165]

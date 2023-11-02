@@ -1,0 +1,76 @@
+{
+  "source": "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/CartView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Cart"
+      },
+      {
+        "comment": "",
+        "key": "Beff Burger"
+      },
+      {
+        "comment": "",
+        "key": "Classic Beff Burger"
+      },
+      {
+        "comment": "",
+        "key": "Side Meals"
+      },
+      {
+        "comment": "",
+        "key": "75 EGP"
+      },
+      {
+        "comment": "",
+        "key": "%lld"
+      },
+      {
+        "comment": "",
+        "key": "coupon"
+      },
+      {
+        "comment": "",
+        "key": "YEG you saved 20 EGP"
+      },
+      {
+        "comment": "",
+        "key": "Coupon Applied"
+      },
+      {
+        "comment": "",
+        "key": "Subtotal"
+      },
+      {
+        "comment": "",
+        "key": "250 EGP"
+      },
+      {
+        "comment": "",
+        "key": "Shipping fee"
+      },
+      {
+        "comment": "",
+        "key": "20 EGP"
+      },
+      {
+        "comment": "",
+        "key": "coupon Discount"
+      },
+      {
+        "comment": "",
+        "key": "(-)20 EGP"
+      },
+      {
+        "comment": "",
+        "key": "255 EGP"
+      },
+      {
+        "comment": "",
+        "key": "Checkout"
+      }
+    ]
+  },
+  "version": 1
+}

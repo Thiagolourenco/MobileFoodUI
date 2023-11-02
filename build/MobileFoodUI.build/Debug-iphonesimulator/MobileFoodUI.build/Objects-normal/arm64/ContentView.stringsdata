@@ -1,0 +1,44 @@
+{
+  "source": "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Outubro, 30"
+      },
+      {
+        "comment": "",
+        "key": "Thiago Lourenço"
+      },
+      {
+        "comment": "",
+        "key": "Search Food"
+      },
+      {
+        "comment": "",
+        "key": "Descrição Restaurante"
+      },
+      {
+        "comment": "",
+        "key": "Pratos"
+      },
+      {
+        "comment": "",
+        "key": "Feijão com Arroz 280gm"
+      },
+      {
+        "comment": "",
+        "key": "R$ 200"
+      },
+      {
+        "comment": "",
+        "key": "4,0"
+      },
+      {
+        "comment": "",
+        "key": "Adicionar"
+      }
+    ]
+  },
+  "version": 1
+}

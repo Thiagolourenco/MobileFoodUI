@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "1e9f32300061a3644f53044c86460f87ec76a8cd6e6b97359a249795db7909b5"
+build_start_time: [1698932194, 586596012]
+build_end_time: [1698932194, 883584976]
+inputs:
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/CartView.swift": [1698109556, 136063814]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/ContentView.swift": !private [1698931925, 599096298]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/MobileFoodUIApp.swift": [1698088037, 486457347]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/NavigationTabView.swift": [1698108951, 959136486]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/ProfileView.swift": [1697835103, 961559057]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/SettigsView.swift": [1697835141, 112755775]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/Utils/Dish.swift": [1698932193, 767236709]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/Utils/Restaurant.swift": [1698932185, 823196887]
+  "/Users/thiagolourenco/Documents/Develop/Mobile/IOS/MobileFoodUI/MobileFoodUI/Utils/Utils.swift": !private [1698932179, 417604446]
