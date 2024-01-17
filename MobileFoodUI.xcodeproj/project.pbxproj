@@ -18,6 +18,7 @@
 		81DEE1592AE31FF100778CCD /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DEE1582AE31FF100778CCD /* CartView.swift */; };
 		81DEE15B2AE3200500778CCD /* SettigsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DEE15A2AE3200500778CCD /* SettigsView.swift */; };
 		81DEE15D2AE3217E00778CCD /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DEE15C2AE3217E00778CCD /* NavigationTabView.swift */; };
+		81E6EDBC2B58525900CFB572 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6EDBB2B58525900CFB572 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		81DEE1582AE31FF100778CCD /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		81DEE15A2AE3200500778CCD /* SettigsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsView.swift; sourceTree = "<group>"; };
 		81DEE15C2AE3217E00778CCD /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
+		81E6EDBB2B58525900CFB572 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				81DEE15A2AE3200500778CCD /* SettigsView.swift */,
 				818D1AE72ACF1E530059EC0A /* ContentView.swift */,
 				81DEE1582AE31FF100778CCD /* CartView.swift */,
+				81E6EDBB2B58525900CFB572 /* Onboarding.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				81DEE15D2AE3217E00778CCD /* NavigationTabView.swift in Sources */,
 				81DEE1592AE31FF100778CCD /* CartView.swift in Sources */,
+				81E6EDBC2B58525900CFB572 /* Onboarding.swift in Sources */,
 				81DEE1572AE31FE000778CCD /* ProfileView.swift in Sources */,
 				8189DB652AF3DADF0007DA0F /* Utils.swift in Sources */,
 				8189DB672AF3DD540007DA0F /* Restaurant.swift in Sources */,

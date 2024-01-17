@@ -216,6 +216,7 @@ struct CartView: View {
                     
                 }
             }
+            
         }
         .navigationTitle("Cart")
         .navigationBarTitleDisplayMode(.inline)

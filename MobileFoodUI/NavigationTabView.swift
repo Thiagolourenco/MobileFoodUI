@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationTabView: View {
+    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
     var body: some View {
         ZStack {
             Color.red.edgesIgnoringSafeArea(.all)
@@ -48,11 +49,15 @@ struct NavigationTabView: View {
                         Text("Perfil")
                     }
             }
+            
             .onAppear(){
                 UITabBar.appearance().backgroundColor = .cyan
             }
             .accentColor(.indigo)
         }
+        .sheet(isPresented: $isFirstTime, content: {
+            Onboarding().interactiveDismissDisabled()
+        })
         
 
     }
