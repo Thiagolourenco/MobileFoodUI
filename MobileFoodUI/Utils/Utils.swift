@@ -27,5 +27,14 @@ struct Utils {
 
         ]
     }
+    
+    struct ListSettingsArray {
+        var list: [ListSettings] = [
+            ListSettings(name: "Edit Profile"),
+            ListSettings(name: "Settings"),
+            ListSettings(name: "Suporte"),
+            ListSettings(name: "About the app")
+        ]
+    }
 }
 

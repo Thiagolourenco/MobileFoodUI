@@ -19,65 +19,12 @@ struct Onboarding: View {
                 .foregroundStyle(.white)
                 .padding()
                 
+            CardView(imageSystem: "birthday.cake.fill", description: "Peça os melhores bolos e doces para usa festa de aniversário")
             
-            HStack {
-                Image(systemName: "birthday.cake.fill")
-                    .font(.title)
-                    .foregroundStyle(.gray.opacity(0.9))
-                    .padding()
-                Text("Peça os melhores bolos e doces para usa festa de aniversário")
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.leading)
-                    .font(.title3)
-                    .bold()
-                    .padding([.top], 16)
-                    .padding([.bottom], 16)
-                    .padding([.trailing], 8)
-                    
-            }
-            .frame(minWidth: 340, idealWidth: 0, maxWidth: 360, alignment: .center)
-            .background(.gray.opacity(0.3))
-            .cornerRadius(9)
-            .padding()
+            CardView(imageSystem: "wineglass.fill", description: "Preça as melhores bebidas, de cerveja a refrigerante você encontra aqui")
             
-            HStack {
-                Image(systemName: "wineglass.fill")
-                    .font(.title)
-                    .foregroundStyle(.gray.opacity(0.9))
-                    .padding()
-                
-                Text("Preça as melhores bebidas, de cerveja a refrigerante você encontra aqui")
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.leading)
-                    .font(.title3)
-                    .bold()
-                    .padding([.top], 16)
-                    .padding([.bottom], 16)
-                    .padding([.trailing], 8)
-            }
-            .frame(minWidth: 340, idealWidth: 0, maxWidth: 360, alignment: .center)
-            .background(.gray.opacity(0.3))
-            .cornerRadius(9)
-            .padding()
-            
-            HStack {
-                Image(systemName: "fork.knife")
-                    .font(.title)
-                    .foregroundStyle(.gray.opacity(0.9))
-                    .padding()
-                
-                Text("Peça os melhores comida, pratos executivos ou não venha para cá ")
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.leading)
-                    .font(.title3)
-                    .bold()
-                    .padding()
-            }
-            .frame(minWidth: 340, idealWidth: 0, maxWidth: 360, alignment: .center)
-            .background(.gray.opacity(0.3))
-            .cornerRadius(9)
-            .padding()
-            
+            CardView(imageSystem: "fork.knife", description: "Peça os melhores comida, pratos executivos ou não venha para cá ")
+          
             Button(action: {
                isFistTime = false
             }, label: {
@@ -97,7 +44,36 @@ struct Onboarding: View {
         .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(.black)
     }
+    
+    
+    struct CardView: View {
+        var imageSystem: String = ""
+        var description: String = ""
+        
+        var body: some View {
+            HStack {
+               Image(systemName: imageSystem)
+                   .font(.title)
+                   .foregroundStyle(.gray.opacity(0.9))
+                   .padding()
+               
+               Text(description)
+                   .foregroundStyle(.white)
+                   .multilineTextAlignment(.leading)
+                   .font(.title3)
+                   .bold()
+                   .padding()
+           }
+           .frame(minWidth: 340, idealWidth: 0, maxWidth: 360, alignment: .center)
+           .background(.gray.opacity(0.3))
+           .cornerRadius(9)
+           .padding()
+        }
+        
+        
+    }
 }
+
 
 #Preview {
     Onboarding()

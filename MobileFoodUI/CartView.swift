@@ -237,8 +237,7 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
             CartView()
-        }
+        
     }
 }
