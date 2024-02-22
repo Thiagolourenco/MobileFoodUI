@@ -10,7 +10,8 @@ import SwiftUI
 struct NavigationTabView: View {
     @AppStorage("isFirstTime") private var isFirstTime: Bool = true
     @State private var selectedTabView: Int = 0
-        
+    @State var mockListOrderNew = MockRequestsReturn()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
        
@@ -18,7 +19,7 @@ struct NavigationTabView: View {
             TabView(selection: $selectedTabView) {
                 ContentView()
                     .tag(0)
-                CartView()
+                CartView(listOrderNew: mockListOrderNew)
                     .tag(1)
                 SettigsView()
                     .tag(2)

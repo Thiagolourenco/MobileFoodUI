@@ -8,97 +8,21 @@
 import SwiftUI
 
 struct CartView: View {
-    @State var listOrder = [0, 1, 2]
-    @State var teste: Int = 0;
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var listOrderNew = MockRequestsReturn();
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 ScrollView {
                     VStack {
-                        ForEach(0..<3) { value in
-                            VStack() {
-                                
-                                HStack {
-                                    Rectangle()
-                                        .fill()
-                                        .frame(width: 80, height: 80)
-                                        .cornerRadius(16)
-                                        .padding([.trailing])
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text("Beff Burger")
-                                            .font(.title3)
-                                        
-                                        Text("Classic Beff Burger")
-                                            .font(.subheadline)
-                                        
-                                        Button {
-                                            print("OPA")
-                                        } label: {
-                                            Text("Side Meals")
-                                                .frame(width: 100, height: 30)
-                                                .font(.subheadline)
-                                                .foregroundColor(.orange)
-                                                .background(.orange.opacity(0.2))
-                                            
-                                        }
-                                        .cornerRadius(30)
-                                    }
-                                    
-                                    
-                                    VStack(alignment: .center) {
-                                        Text("75 EGP")
-                                            .font(.headline)
-                                            .padding([.bottom])
-                                        
-                                        HStack {
-                                            Button {
-                                                print("REMOVE")
-                                            } label: {
-                                                Image(systemName: "minus")
-                                                    .foregroundColor(.white)
-                                                    .frame(width: 20, height: 20)
-                                                    .background(.orange)
-                                                    .cornerRadius(15)
-                                            }
-                                            
-                                            Text("\(teste)")
-                                            
-                                            Button {
-                                                teste += 1
-                                            } label: {
-                                                Image(systemName: "plus")
-                                                
-                                                    .foregroundColor(.white)
-                                                    .frame(width: 20, height: 20)
-                                                    .background(.orange)
-                                                    .cornerRadius(15)
-                                                
-                                            }
-                                        }
-                                        .frame(width: 80, height: 30)
-                                        .background(.orange.opacity(0.2))
-                                        .cornerRadius(40)
-                                        
-                                        
-                                    }
-                                    
-                                    
-                                }
-                            }
+                        ForEach($listOrderNew.listRequests.indices, id: \.self) { index in
+                            DishViewComponent(
+                                orderValue: $listOrderNew.listRequests[index], 
+                                increment: {listOrderNew.incrementValue(index: index)},
+                                decrement: {listOrderNew.decrementValue(index: index)},
+                                index: index)
                         }
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 360, alignment: .center)
-                        .background(.white)
-                        .border(.gray.opacity(0.2))
-                        .cornerRadius(20)
-                        .shadow(radius: 5.0)
-                        .padding([.top], 8)
-                        .padding([.trailing], 16)
-                        
-                        
                     }
                     .padding([.leading])
                     
@@ -189,7 +113,7 @@ struct CartView: View {
                         .padding([.bottom], 32)
                         
                     }
-                    //            .padding()
+//                    .padding()
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                     .background(.gray.opacity(0.1))
                     .cornerRadius(10)
@@ -233,11 +157,105 @@ struct CartView: View {
                }
            }
        }
+
 }
+
+struct DishViewComponent: View {
+    @Binding var orderValue: MockRequests
+    var increment: () -> Void
+    var decrement: () -> Void
+    var index: Int
+    @State var listOrderNew = MockRequestsReturn();
+
+    var body: some View {
+        VStack() {
+            
+            HStack {
+                Rectangle()
+                    .fill()
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(16)
+                    .padding([.trailing])
+                
+                VStack(alignment: .leading) {
+                    Text(orderValue.name)
+                        .font(.title3)
+                    
+                    Text(orderValue.description)
+                        .font(.subheadline)
+                    
+                    Button {
+                        print("OPA")
+                    } label: {
+                        Text("Side Meals")
+                            .frame(width: 100, height: 30)
+                            .font(.subheadline)
+                            .foregroundColor(.orange)
+                            .background(.orange.opacity(0.2))
+                        
+                    }
+                    .cornerRadius(30)
+                }
+                
+                
+                VStack(alignment: .center) {
+                    Text("75 EGP")
+                        .font(.headline)
+                        .padding([.bottom])
+                    
+                    HStack {
+                        Button {
+                            print(index)
+                            decrement()
+                            
+                        } label: {
+                            Image(systemName: "minus")
+                                .foregroundColor(.white)
+                                .frame(width: 20, height: 20)
+                                .background(.orange)
+                                .cornerRadius(15)
+                        }
+                        
+                        Text("\(orderValue.quantity)")
+                        
+                        Button {
+                            increment()
+                        } label: {
+                            Image(systemName: "plus")
+                            
+                                .foregroundColor(.white)
+                                .frame(width: 20, height: 20)
+                                .background(.orange)
+                                .cornerRadius(15)
+                            
+                        }
+                    }
+                    .frame(width: 80, height: 30)
+                    .background(.orange.opacity(0.2))
+                    .cornerRadius(40)
+                }
+            }
+        }    
+        .padding()
+        .frame(minWidth: 0, maxWidth: 360, alignment: .center)
+        .background(.white)
+        .border(.gray.opacity(0.2))
+        .cornerRadius(20)
+        .shadow(radius: 5.0)
+        .padding([.top], 8)
+        .padding([.trailing], 16)
+                
+    }
+    
+    }
+    
+
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-            CartView()
+        let mockRequestsReturn = MockRequestsReturn()
+
+        CartView( listOrderNew: mockRequestsReturn)
         
     }
 }

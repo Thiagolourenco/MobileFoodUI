@@ -24,7 +24,6 @@ struct Utils {
             Dish(name: "Prato 02", value: "50.0", type: "Teste02", image: "DishTwo" ,stars: "4.0"),
             Dish(name: "Prato 03", value: "40.0", type: "Teste03", image: "DishThree" ,stars: "3.0"),
             Dish(name: "Prato 04", value: "70.0", type: "Teste03", image: "DishOne" ,stars: "4.0")
-
         ]
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8179516D2B7555CA00955578 /* MockRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179516C2B7555CA00955578 /* MockRequests.swift */; };
+		8179516F2B75574900955578 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179516E2B75574900955578 /* CartViewModel.swift */; };
 		8189DB652AF3DADF0007DA0F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB642AF3DADF0007DA0F /* Utils.swift */; };
 		8189DB672AF3DD540007DA0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB662AF3DD540007DA0F /* Restaurant.swift */; };
 		8189DB692AF3DD620007DA0F /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB682AF3DD620007DA0F /* Dish.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8179516C2B7555CA00955578 /* MockRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequests.swift; sourceTree = "<group>"; };
+		8179516E2B75574900955578 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		8189DB642AF3DADF0007DA0F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8189DB662AF3DD540007DA0F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		8189DB682AF3DD620007DA0F /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 		8189DB612AF3D7510007DA0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8189DB632AF3D7650007DA0F /* Utils */,
 				818D1AE92ACF1E560059EC0A /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -61,10 +66,10 @@
 		8189DB622AF3D75C0007DA0F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				81DEE1562AE31FE000778CCD /* ProfileView.swift */,
-				81DEE15A2AE3200500778CCD /* SettigsView.swift */,
-				818D1AE72ACF1E530059EC0A /* ContentView.swift */,
-				81DEE1582AE31FF100778CCD /* CartView.swift */,
+				81B359732B72BF2200FB5EC2 /* CartScreen */,
+				81B359722B72BF1300FB5EC2 /* SettingsScreen */,
+				81B3596F2B72BDF600FB5EC2 /* ProfileScreen */,
+				81B3596E2B72BDED00FB5EC2 /* HomeScreen */,
 				81E6EDBB2B58525900CFB572 /* Onboarding.swift */,
 			);
 			name = Screens;
@@ -73,10 +78,6 @@
 		8189DB632AF3D7650007DA0F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8189DB642AF3DADF0007DA0F /* Utils.swift */,
-				8189DB682AF3DD620007DA0F /* Dish.swift */,
-				81E6EDBD2B62EAFC00CFB572 /* ListSettings.swift */,
-				8189DB662AF3DD540007DA0F /* Restaurant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -100,8 +101,8 @@
 		818D1AE42ACF1E530059EC0A /* MobileFoodUI */ = {
 			isa = PBXGroup;
 			children = (
-				8189DB632AF3D7650007DA0F /* Utils */,
-				8189DB622AF3D75C0007DA0F /* Screens */,
+				81B359702B72BE1300FB5EC2 /* View */,
+				81B3596D2B72BDE200FB5EC2 /* Models */,
 				8189DB612AF3D7510007DA0F /* Resources */,
 				818D1AE52ACF1E530059EC0A /* MobileFoodUIApp.swift */,
 				81DEE15C2AE3217E00778CCD /* NavigationTabView.swift */,
@@ -116,6 +117,67 @@
 				818D1AEC2ACF1E560059EC0A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81B3596D2B72BDE200FB5EC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8189DB642AF3DADF0007DA0F /* Utils.swift */,
+				8189DB682AF3DD620007DA0F /* Dish.swift */,
+				8179516C2B7555CA00955578 /* MockRequests.swift */,
+				81E6EDBD2B62EAFC00CFB572 /* ListSettings.swift */,
+				8189DB662AF3DD540007DA0F /* Restaurant.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		81B3596E2B72BDED00FB5EC2 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				818D1AE72ACF1E530059EC0A /* ContentView.swift */,
+			);
+			name = HomeScreen;
+			sourceTree = "<group>";
+		};
+		81B3596F2B72BDF600FB5EC2 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81DEE1562AE31FE000778CCD /* ProfileView.swift */,
+			);
+			name = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		81B359702B72BE1300FB5EC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81B359712B72BE1D00FB5EC2 /* Shared */,
+				8189DB622AF3D75C0007DA0F /* Screens */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		81B359712B72BE1D00FB5EC2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		81B359722B72BF1300FB5EC2 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81DEE15A2AE3200500778CCD /* SettigsView.swift */,
+			);
+			name = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		81B359732B72BF2200FB5EC2 /* CartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81DEE1582AE31FF100778CCD /* CartView.swift */,
+				8179516E2B75574900955578 /* CartViewModel.swift */,
+			);
+			name = CartScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +253,7 @@
 				81DEE15D2AE3217E00778CCD /* NavigationTabView.swift in Sources */,
 				81DEE1592AE31FF100778CCD /* CartView.swift in Sources */,
 				81E6EDBC2B58525900CFB572 /* Onboarding.swift in Sources */,
+				8179516F2B75574900955578 /* CartViewModel.swift in Sources */,
 				81DEE1572AE31FE000778CCD /* ProfileView.swift in Sources */,
 				8189DB652AF3DADF0007DA0F /* Utils.swift in Sources */,
 				81E6EDBE2B62EAFC00CFB572 /* ListSettings.swift in Sources */,
@@ -199,6 +262,7 @@
 				8189DB692AF3DD620007DA0F /* Dish.swift in Sources */,
 				81DEE15B2AE3200500778CCD /* SettigsView.swift in Sources */,
 				818D1AE62ACF1E530059EC0A /* MobileFoodUIApp.swift in Sources */,
+				8179516D2B7555CA00955578 /* MockRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
