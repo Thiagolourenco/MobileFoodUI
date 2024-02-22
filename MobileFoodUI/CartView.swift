@@ -122,7 +122,16 @@ struct CartView: View {
                     
                     
                     Button {
-                        print("Checkout")
+                        do {
+                             let jsonEncoder = JSONEncoder()
+                             jsonEncoder.outputFormatting = .prettyPrinted
+                             let myJson = try jsonEncoder.encode(listOrderNew.listRequests)
+                             if let jsonString = String(data: myJson, encoding: .utf8) {
+                                 print("Checkout ===> ", jsonString)
+                             }
+                         } catch {
+                             print("Erro ao converter para JSON: \(error)")
+                         }
                     } label: {
                         Text("Checkout")
                             .foregroundColor(.white)

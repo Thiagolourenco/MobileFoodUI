@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MockRequests: Identifiable {
+struct MockRequests: Identifiable, Encodable {
     var id = UUID()
     var name: String
     var description: String
