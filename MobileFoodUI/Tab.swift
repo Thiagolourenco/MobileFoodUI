@@ -20,7 +20,7 @@ enum Tab: String, CaseIterable {
         case .cart:
             "cart"
         case .gear:
-            "gear"
+            "gearshape"
         case .person:
             "person"
         }

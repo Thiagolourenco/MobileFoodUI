@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct MobileFoodUIApp: App {
+    @AppStorage("isSign") private var isSign: Bool = false
+
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                NavigationTabView()
+                if isSign {
+                    NavigationTabView()
+                } else {
 
-            }
+                    LoginView()
+                }
+
         }
     }
 }

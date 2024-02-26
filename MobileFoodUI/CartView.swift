@@ -148,6 +148,7 @@ struct CartView: View {
                     
                     
                 }
+                .ignoresSafeArea()
             }
             
         }

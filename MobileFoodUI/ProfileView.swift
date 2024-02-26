@@ -87,10 +87,11 @@ struct ProfileView: View {
                 .foregroundStyle(.gray)
                 .font(.callout)
                 .padding()
+                .padding([.bottom])
         }
         .frame(minHeight: 0, idealHeight: .infinity, maxHeight: .infinity)
         .background(.black)
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.top)
 
 
     }
