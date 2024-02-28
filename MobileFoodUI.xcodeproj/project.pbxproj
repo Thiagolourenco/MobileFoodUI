@@ -10,6 +10,7 @@
 		8179516D2B7555CA00955578 /* MockRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179516C2B7555CA00955578 /* MockRequests.swift */; };
 		8179516F2B75574900955578 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179516E2B75574900955578 /* CartViewModel.swift */; };
 		818876EA2B8CFC1300E3A5B0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818876E92B8CFC1300E3A5B0 /* LoginView.swift */; };
+		818876EF2B8FB7EC00E3A5B0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818876EE2B8FB7EC00E3A5B0 /* SignUpView.swift */; };
 		8189DB652AF3DADF0007DA0F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB642AF3DADF0007DA0F /* Utils.swift */; };
 		8189DB672AF3DD540007DA0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB662AF3DD540007DA0F /* Restaurant.swift */; };
 		8189DB692AF3DD620007DA0F /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189DB682AF3DD620007DA0F /* Dish.swift */; };
@@ -31,6 +32,7 @@
 		8179516C2B7555CA00955578 /* MockRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequests.swift; sourceTree = "<group>"; };
 		8179516E2B75574900955578 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		818876E92B8CFC1300E3A5B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		818876EE2B8FB7EC00E3A5B0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		8189DB642AF3DADF0007DA0F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8189DB662AF3DD540007DA0F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		8189DB682AF3DD620007DA0F /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			name = LoginScreen;
 			sourceTree = "<group>";
 		};
+		818876ED2B8FB7DA00E3A5B0 /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				818876EE2B8FB7EC00E3A5B0 /* SignUpView.swift */,
+			);
+			name = SignUpScreen;
+			sourceTree = "<group>";
+		};
 		8189DB612AF3D7510007DA0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		8189DB622AF3D75C0007DA0F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				818876ED2B8FB7DA00E3A5B0 /* SignUpScreen */,
 				818876E82B8CFBFE00E3A5B0 /* LoginScreen */,
 				81B359732B72BF2200FB5EC2 /* CartScreen */,
 				81B359722B72BF1300FB5EC2 /* SettingsScreen */,
@@ -279,6 +290,7 @@
 				81A64DB72B89282900D3FBED /* TabCustom.swift in Sources */,
 				8189DB692AF3DD620007DA0F /* Dish.swift in Sources */,
 				81DEE15B2AE3200500778CCD /* SettigsView.swift in Sources */,
+				818876EF2B8FB7EC00E3A5B0 /* SignUpView.swift in Sources */,
 				818D1AE62ACF1E530059EC0A /* MobileFoodUIApp.swift in Sources */,
 				8179516D2B7555CA00955578 /* MockRequests.swift in Sources */,
 				818876EA2B8CFC1300E3A5B0 /* LoginView.swift in Sources */,

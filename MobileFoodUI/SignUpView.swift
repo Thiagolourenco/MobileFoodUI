@@ -1,17 +1,17 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  MobileFoodUI
 //
-//  Created by Thiago Lourenço on 26/02/24.
+//  Created by Thiago Lourenço on 28/02/24.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignUpView: View {
     @State private var username: String = ""
     @State var password: String = ""
-    @AppStorage("isSign") private var isSign: Bool = true
-
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationStack {
             ZStack() {
@@ -32,17 +32,13 @@ struct LoginView: View {
                 
                 VStack {
                     
-                    Text("Login Here")
+                    Text("SignUp Here")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(.blue)
+                        .padding(.top)
                     
-                    Text("Welcome back you have been missed!")
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
-                        .padding([.leading], 32)
-                        .padding([.trailing], 32)
-                        .padding([.top], 8)
+                    Spacer()
                     
                     Group {
                         TextField(text: $username) {
@@ -61,6 +57,26 @@ struct LoginView: View {
                                RoundedRectangle(cornerRadius: 8)
                                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
                            )
+                        
+                        TextField(text: $username) {
+                            Text("email")
+                                .font(.callout)
+                        }
+                        .frame(width: .infinity, height: 50)
+                        .padding(.horizontal, 10)
+                        .textInputAutocapitalization(.never)
+                        .background(
+                               RoundedRectangle(cornerRadius: 8)
+                                   .stroke(Color.blue.opacity(0.7), lineWidth: 1)
+                           )
+                           .cornerRadius(8)
+                           .overlay(
+                               RoundedRectangle(cornerRadius: 8)
+                                   .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                           )
+                           .padding([.top])
+
+                        
                         
                         SecureField(text: $password) {
                             Text("Password")
@@ -88,9 +104,9 @@ struct LoginView: View {
                     Button {
                         print("Username", username)
                         print("Password", password)
-                        isSign = true
+//                        isSign = true
                     } label: {
-                        Text("LOGIN")
+                        Text("SING UP")
                             .foregroundStyle(.white)
                             .frame(width: 300)
                             .padding()
@@ -100,69 +116,29 @@ struct LoginView: View {
                     }
                     .padding([.top])
                     
+                    
                     Button {
-                        print("Forgot Password")
+                        mode.wrappedValue.dismiss()
                     } label: {
-                        Text("Forgot your password?")
-                            .underline()
+                        Text("GO BACK LOGIN")
+                            .foregroundStyle(.blue)
+                            .frame(width: 300)
+                            .padding()
+                            .frame(width: .infinity)
+                            .border(.blue, width:1)
+                            .cornerRadius(16)
+
                     }
-                    .padding([.top], 8)
-                    .padding([.leading], 120)
-                    
-                    
-                    Text("- Continue with -")
-                        .padding([.top])
-                    
-                    HStack(spacing: 32) {
-                        
-                        Button {
-                            print("GOOGLE")
-                        } label: {
-                            Text("G")
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                        }
-                        
-                        Button {
-                            print("Facebook")
-                        } label: {
-                            Text("F")
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                        }
-                        
-                        Button {
-                            print("Twitter")
-                        } label: {
-                            Text("T")
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                        }
-                    }
-                    .padding([.top], 8)
-                    
-                    NavigationLink {
-                        SignUpView()
-                    } label: {
-                        HStack {
-                            Text("Already have ac account ?")
-                                .foregroundStyle(.black)
-                            Text("Sign up")
-                                .foregroundStyle(.blue)
-                        }
-                        .padding()
-                    }
-                  
-                    
+                    .padding([.top])
+                
+                    Spacer()
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    LoginView()
+    SignUpView()
 }

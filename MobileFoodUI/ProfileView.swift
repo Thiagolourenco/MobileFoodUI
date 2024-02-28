@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     var listSettings = Utils.ListSettingsArray().list
-    
+    @AppStorage("isSign") private var isSign: Bool = true
+
     var body: some View {
         VStack() {
             HeaderView()
@@ -81,6 +82,21 @@ struct ProfileView: View {
                     .padding([.trailing], 16)
                     .padding([.leading], 16)
                 }
+                
+                Button {
+                    print("Logout")
+                    isSign = false
+                } label: {
+                    Text("Logout")
+                        .foregroundStyle(.blue)
+                        .frame(width: 300)
+                        .padding()
+                        .background(.white)
+                        .frame(width: .infinity)
+                        .cornerRadius(16)
+                }
+                .padding(.top, 2)
+
             }
             
             Text("Version 3.0.4")

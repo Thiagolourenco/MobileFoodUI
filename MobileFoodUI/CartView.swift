@@ -14,7 +14,7 @@ struct CartView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                ScrollView {
+                ScrollView() {
                     VStack {
                         ForEach($listOrderNew.listRequests.indices, id: \.self) { index in
                             DishViewComponent(
@@ -148,9 +148,10 @@ struct CartView: View {
                     
                     
                 }
-                .ignoresSafeArea()
+                .scrollIndicators(.never)
+                .padding(.bottom, 52)
             }
-            
+            .edgesIgnoringSafeArea(.top)
         }
         .navigationTitle("Cart")
         .navigationBarTitleDisplayMode(.inline)
